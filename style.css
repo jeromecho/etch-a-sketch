@@ -1,0 +1,126 @@
+/* styles for the grid etch-a-sketch*/
+
+body {
+    height: 100%;
+    width: 100%; 
+    box-sizing: border-box;
+    display: grid;
+    grid-template-areas: 
+        "header header header header header header"
+        "canvas canvas canvas canvas palette palette"
+        "canvas canvas canvas canvas palette palette"
+        "canvas canvas canvas canvas palette palette"
+        "canvas canvas canvas canvas palette palette"
+        "footer footer footer footer footer footer";
+    align-items: center;
+    justify-content: center;
+    background: url("https://images-na.ssl-images-amazon.com/images/I/71ekoo8SEgL._AC_SY355_.jpg");
+}
+
+#header, #container, #options, #clearRange, #footer {
+    position: relative;
+    top: 60px;
+}
+
+#header {
+    grid-area: header;
+    width: 100%;
+    text-align: center;
+}
+
+#header > h1 {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 34px;
+}
+
+p {
+    font-family: 'Roboto Mono', monospace;
+}
+
+#container {
+    display: grid; 
+    grid-area: canvas;
+    background-color: white;
+    width: 480px;
+    height: 480px; 
+    box-sizing: border-box;
+}
+
+#options, #palette {
+    align-items: center;
+}
+
+#options {
+    grid-area: palette;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 150px;
+    /* background-color: rgba(150, 150, 150, 0.9); */
+    background-image: linear-gradient(rgba(135, 135, 135, 1), rgba(180, 180, 180, 0.5))
+}
+
+#palette {
+    display: grid; 
+    grid-template-columns: 25px 25px 25px 25px;
+    grid-template-rows: 25px 25px 25px 25px;
+    justify-content: center;
+    position: relative; 
+    top: 80px;
+}
+
+#palette > button {
+    width: 25px;
+    height: 25px;
+    background-color: white;
+}
+
+#palette > button:hover {
+    border: 1px solid yellow;
+}
+
+#clearRange {
+    position: relative;
+    top: 180px;
+    display: grid;
+    grid-template-columns: 40px;
+}
+
+#clearRange > button {
+    width: 40px; 
+    height: 40px;
+    border-radius: 30%;
+}
+
+button > img {
+    width: 25px;
+    height: 25px;
+    position: relative;
+    top: 1.5px;
+    right: 3.5px;
+}
+
+#clearRange > input {
+    position: relative;
+    top: 80px;
+    right: 30px;
+    width: 100px;
+    background-color: green;
+}
+
+#gridBlock:hover{
+    transform: scale(1.2,1.2);
+    background-color: yellow;
+}
+
+#footer {
+    grid-area: footer;
+    width: 100%;
+    height: 20%;
+    text-align: center;
+    font-size: 13px;
+}
+
+/*
+    Grid values::after  fr, auto, %
+*/

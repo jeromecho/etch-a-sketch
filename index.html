@@ -1,0 +1,51 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+        <!-- main script for DOM manipulation-->
+        <script src="script.js" async></script>
+        <!-- fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet"> 
+    </head>
+    <body> 
+        <div id="header">
+            <h1>Etch-A-Sketch</h1>
+            <p>Visualize your passion.</p>
+        </div>
+        <!-- Parent of the grid blocks -->
+        <div id="container">
+        </div>       
+        <div id="options">
+            <div id="palette">
+                <button class="color"></button>
+                <button class="color"></button>
+                <button class="color"></button>
+                <button class="color"></button>
+                <button class="color"></button>
+                <button class="color"></button>
+                <button class="color"></button>
+                <button class="color"></button>
+                <button class="color"></button>
+                <button class="color"></button>
+                <button class="color"></button>
+                <button class="color"></button>
+                <button class="color"></button>
+                <button class="color"></button>
+                <button class="color"></button>
+                <button class="color"></button>
+            </div>
+            <div id="clearRange">
+                <button id="clear"><img src="/pics/clear.svg"></button>
+                <label for="myRange"></label>
+                <input type="range" id="myRange" name="myRange" min="1" max="50">
+            </div>
+        </div>
+        <div id="footer">
+            <p>Lovingly crafted by Miyami Kuro</p>
+        </div>
+    </body>
+</html>
